@@ -1,18 +1,45 @@
-# JavaScript Module Template
-This repository serves as an easy-start template for JavaScript/TypeScript NPM packages. 
+# delicate
+Touch any key to die!
 
-Simply clone the repository into a directory:
+### [Find @t99/delicate on NPM.](https://www.npmjs.com/package/@t99/delicate)
 
-```bash
-$ git clone git@github.com:T99/js-module-template.git my-new-project
+## Table of Contents
+
+ - [Installation](#installation)
+ - [Basic Usage](#basic-usage)
+ - [License](#license)
+
+## Installation
+Install from NPM with
+```
+$ npm install --save @t99/delicate
 ```
 
-And then run the init script:
+Note that 'delicate' only works with NodeJS, as it relies on both 'process#exit' and Node's access to stdin.
 
-```bash
-$ ./init.py
+## Basic Usage
+```typescript
+import * as delicate from "@t99/delicate";
+delicate.prompt();
+// Then press a key. You'll never guess what happens next!
 ```
 
-The init script will interactively prompt you for package information and then automatically build the package, correct and fill-in package information, and install the specified NPM packages already included in the provided `package.json`.
+If you want to change the action that occurs after the <kbd>any</kbd> key is pressed:
+```typescript
+import * as delicate from "@t99/delicate";
+delicate.prompt(() => {
+    // Die with style.
+});
+```
 
-And that's it! Your project is ready to go.
+If you would rather still use the default implementation but want to exit with a different status code (other than the default exit code, `0`):
+```typescript
+import * as delicate from "@t99/delicate";
+delicate.prompt(42);
+// Quit with an exit code of '42'.
+```
+
+## License
+@t99/delicate is made available under the GNU General Public License v3.
+
+Copyright (C) 2019 Trevor Sears

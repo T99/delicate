@@ -1,0 +1,2 @@
+"use strict";var __importStar=this&&this.__importStar||function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var r in t)Object.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e.default=t,e};Object.defineProperty(exports,"__esModule",{value:!0});const delicate=__importStar(require("../../main"));console.log("Testing whether or not this thing is delicate..."),delicate.prompt();
+//# sourceMappingURL=press-any-key-to-die.js.map
