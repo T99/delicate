@@ -18,35 +18,22 @@ export function prompt(): void;
 export function prompt(exitCode: number): void;
 export function prompt(callback: () => any): void;
 export function prompt(exitCodeOrCallback?: number | (() => any)): void {
-	
-	let isCallback: boolean = !((typeof exitCodeOrCallback === "number") || (exitCodeOrCallback === undefined));
 
 	readline.emitKeypressEvents(process.stdin);
 	
-	// let reader: readline.Interface = readline.createInterface({
-	// 	input: process.stdin,
-	// 	output: process.stdout
-	// });
-	//
-	// reader.on("line", () => {
-	//
-	// 	console.log("Got data!");
-	//
-	// });
+	let isCallback: boolean = !((typeof exitCodeOrCallback === "number") || (exitCodeOrCallback === undefined));
 	
 	if (process.stdin.isTTY) {
 
 		process.stdin.setRawMode(true);
-		console.log("Press any key to exit.");
+		process.stdout.write("Press any key to exit. ");
 
-	} else {
-
-		process.stdout.write("Press ENTER to exit.");
-
-	}
+	} else process.stdout.write("Press ENTER to exit.");
 	
 	process.stdin.on("data", () => {
-
+		
+		process.stdin.unref();
+		
 		if (!isCallback) process.exit(exitCodeOrCallback as number ?? 0);
 		else (exitCodeOrCallback as () => any)();
 

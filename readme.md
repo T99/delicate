@@ -15,7 +15,7 @@ Install from NPM with
 $ npm install --save @t99/delicate
 ```
 
-Note that 'delicate' only works with NodeJS, as it relies on both 'process#exit' and Node's access to stdin.
+Note that _delicate_ only works with NodeJS, as it relies on both `process#exit` and Node's access to stdin (`process.stdin`).
 
 ## Basic Usage
 ```typescript

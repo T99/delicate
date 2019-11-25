@@ -1,0 +1,2 @@
+"use strict";var __importStar=this&&this.__importStar||function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var o in t)Object.hasOwnProperty.call(t,o)&&(e[o]=t[o]);return e.default=t,e};Object.defineProperty(exports,"__esModule",{value:!0});const delicate=__importStar(require("../../main"));console.log("Testing #prompt with exit code function..."),console.log("This process should quit with an exit code of 25."),delicate.prompt(25);
+//# sourceMappingURL=exit-code-prompt.js.map

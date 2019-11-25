@@ -1,7 +1,10 @@
 {
 	"name": "@t99/delicate",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Touch any key to die.",
+	"publishConfig": {
+		"access": "public"
+	},
 	"main": "js/main",
 	"types": ".d.ts/main",
 	"scripts": {

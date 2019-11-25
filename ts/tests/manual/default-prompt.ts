@@ -6,6 +6,7 @@
 
 import * as delicate from "../../main";
 
-console.log("Testing whether or not this thing is delicate...");
+console.log("Testing default #prompt function...");
+console.log("This process should quit with an exit code of 0.");
 
 delicate.prompt();

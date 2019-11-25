@@ -1,0 +1,2 @@
+"use strict";var __importStar=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var o in e)Object.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t.default=e,t};Object.defineProperty(exports,"__esModule",{value:!0});const delicate=__importStar(require("../../main"));console.log("Testing #prompt with callback function..."),console.log('This process should output "Hello, world!" and then exit.'),delicate.prompt(()=>{console.log("Hello, world!")});
+//# sourceMappingURL=callback-prompt.js.map

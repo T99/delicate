@@ -1,0 +1,2 @@
+"use strict";var __importStar=this&&this.__importStar||function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var r in t)Object.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e.default=t,e};Object.defineProperty(exports,"__esModule",{value:!0});const delicate=__importStar(require("../../main"));console.log("Testing default #prompt function..."),console.log("This process should quit with an exit code of 0."),delicate.prompt();
+//# sourceMappingURL=default-prompt.js.map
